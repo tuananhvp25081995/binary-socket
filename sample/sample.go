@@ -87,7 +87,7 @@ func handleSocket(conn net.Conn) {
 		}
 
 		// Read the next line.
-		line, err = r.ReadString('\n')
+		// line, err = r.ReadString('\n')
 	}
 
 	if err != nil {
