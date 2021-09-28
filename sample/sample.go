@@ -23,6 +23,7 @@ import (
 	"log"
 	"net"
 	"net/http"
+	"time"
 
 	"github.com/desertbit/binarysocket"
 )
@@ -81,6 +82,7 @@ func handleSocket(conn net.Conn) {
 		log.Print("received from client: ", line)
 
 		// Echo back to the client.
+		time.Sleep(time.Second)
 		_, err = conn.Write([]byte(line))
 		if err != nil {
 			log.Fatalf("socket write error: %v", err)
